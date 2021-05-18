@@ -1,0 +1,30 @@
+.err-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 5vh 20px;
+}
+.err-icon,
+.req-error-icon {
+  mask: url("./image-not-found.svg");
+  display: inline-block;
+  mask-size: cover;
+  box-shadow: 1px 1px 1px #9a9a9b;
+  height: calc(10vh + 10vw);
+  width: calc(10vh + 10vw);
+  background-color: #5b5b5f;
+  background-color: var(--danger);
+}
+.req-error-icon {
+  mask: url("./error-905.svg");
+  background-color: var(--danger);
+  mask-size: contain;
+}
+.err-msg {
+  font-size: calc(10px + 1.5vw + 1.5vh);
+}
+@media (max-width: 576px) {
+  .err-container {
+    flex-direction: column;
+  }
+}
