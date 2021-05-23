@@ -20,7 +20,6 @@ export default class App extends React.Component {
   pageNumber = 2;
   isPaused = false;
   searchTextChangeHandler = (searchText) => {
-    console.log(process.env.REACT_APP_UNSPLASH_API_KEY);
     this.searchText = searchText;
     this.setState({ showSpinner: true, images: [] });
     axiosConfig
